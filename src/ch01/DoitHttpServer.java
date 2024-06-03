@@ -77,7 +77,8 @@ public class DoitHttpServer {
 							</body>
 						</html>
 					""";
-
+			
+			// 한글 나오게 하기 
 			exchange.setAttribute("Content-Type", "text/html; charset=UTF-8");
 			exchange.sendResponseHeaders(200, response.length());
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(exchange.getResponseBody()));
